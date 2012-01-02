@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
+gem 'gravatar_image_tag', '1.0.0.pre2'
 
 group :development, :test do
   gem 'sqlite3'
@@ -18,6 +19,7 @@ group :test do
   gem 'autotest-rails-pure'
   gem 'autotest-growl'
   gem 'spork', '0.9.0.rc8'
+  gem 'factory_girl_rails', '1.0'
 end
 
 group :production, :staging do
