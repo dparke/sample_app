@@ -34,6 +34,7 @@ GEM
     autotest-growl (0.2.16)
     autotest-rails-pure (4.1.2)
     builder (3.0.0)
+    closure-compiler (1.1.4)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
@@ -145,6 +146,7 @@ DEPENDENCIES
   ZenTest
   autotest-growl
   autotest-rails-pure
+  closure-compiler
   coffee-rails (~> 3.1.1)
   jquery-rails
   pg
