@@ -1,8 +1,10 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
-gem 'sqlite3'
-gem 'pg'
+
+group :development, :test do
+  gem 'sqlite3'
+end
 
 group :development do
   gem 'rspec-rails', '2.6.1'
@@ -17,6 +19,9 @@ group :test do
   gem 'spork', '0.9.0.rc8'
 end
 
+group :production, :staging do
+  gem 'pg'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
