@@ -30,6 +30,7 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
+    annotate (2.4.1.beta1)
     arel (2.2.1)
     autotest-growl (0.2.16)
     autotest-rails-pure (4.1.2)
@@ -144,6 +145,7 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest
+  annotate (~> 2.4.1.beta)
   autotest-growl
   autotest-rails-pure
   closure-compiler
