@@ -67,5 +67,25 @@ describe "LayoutLinks" do
       response.should have_selector("a",  :href => user_path(@user),
                                           :content => "Profile")
     end
-  end                                 
+
+    it "should have a micropost sidebar" do
+      visit root_path
+      response.should have_selector("a",  :href => user_path(@user),
+                                          :content => @user.name)
+    end
+
+    it "should have a singular micropost count" do
+      mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+      visit root_path
+      response.should contain("micropost")
+      response.should_not contain("microposts")
+    end
+
+    it "should have a singular micropost count" do
+      mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+      mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
+      visit root_path
+      response.should contain("microposts")
+    end
+  end
 end
